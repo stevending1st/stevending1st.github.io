@@ -11,6 +11,12 @@ importers:
       '@astrojs/check':
         specifier: ^0.5.10
         version: 0.5.10(typescript@5.4.5)
+      '@chinese-fonts/lxgwwenkai':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@chinese-fonts/lxgwwenkaibright':
+        specifier: ^1.0.2
+        version: 1.0.2
       astro:
         specifier: ^4.6.3
         version: 4.6.3(typescript@5.4.5)
@@ -165,6 +171,12 @@ packages:
   '@babel/types@7.24.0':
     resolution: {integrity: sha512-+j7a5c253RfKh8iABBhywc8NSfP5LURe7Uh4qpsh6jc+aLJguvmIUBdjSdEMQv2bENrCR5MfRdjGo7vzS/ob7w==}
     engines: {node: '>=6.9.0'}
+
+  '@chinese-fonts/lxgwwenkai@2.0.1':
+    resolution: {integrity: sha512-jFAbk6JyDaUaOjEGf1QplkiYOaHi7NweRXruNUg7//GB3+EWqqWBQKq8DC0eh2vzglQG1ZGeW/Qhji798Su6iQ==}
+
+  '@chinese-fonts/lxgwwenkaibright@1.0.2':
+    resolution: {integrity: sha512-tpM/w0C8B0h5w442iabd6Aqi/JLo2AsigZYZrLmRUvFt94FPvJlZkb0REI6N3hyrux5FriOrS9rN/9VWmbAq2w==}
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -2312,6 +2324,10 @@ snapshots:
       '@babel/helper-string-parser': 7.24.1
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
+
+  '@chinese-fonts/lxgwwenkai@2.0.1': {}
+
+  '@chinese-fonts/lxgwwenkaibright@1.0.2': {}
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:

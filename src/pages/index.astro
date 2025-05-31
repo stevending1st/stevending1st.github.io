@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 
+import "@chinese-fonts/lxgwwenkaibright/dist/LXGWBright-MediumItalic/result.css";
+import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Light/result.css";
+
 import Layout from "../layouts/Layout.astro";
 import MdiFileDocumentMultipleOutline from "../icon/MdiFileDocumentMultipleOutline.astro";
 import MdiFaceManShimmerOutline from "../icon/MdiFaceManShimmerOutline.astro";
@@ -22,7 +25,7 @@ import MdiClipboardAccountOutline from "../icon/MdiClipboardAccountOutline.astro
 
     <h1>stevending1st</h1>
 
-    <p class="description">555555555555555555</p>
+    <p class="description">All Things Have a Beginning, but Few Can Reach the End.</p>
 
     <ul class="menu">
       <li>
@@ -99,16 +102,22 @@ import MdiClipboardAccountOutline from "../icon/MdiClipboardAccountOutline.astro
     line-height: 1;
     text-align: center;
     margin-bottom: 1rem;
+    font-family:'LXGW Bright Medium';
+    font-weight:'800'
   }
 
   .description {
     margin-top: 0;
+    font-family:'LXGW Bright Medium';
+    font-weight:'600'
   }
 
   .menu {
     list-style: none;
     display: flex;
     padding: 0;
+    font-family:'LXGW WenKai Light';
+    font-weight:'400'
   }
 
   .menu li {
