@@ -1,0 +1,118 @@
+---
+import "@chinese-fonts/lxgwwenkaibright/dist/LXGWBright-MediumItalic/result.css";
+import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Light/result.css";
+
+import SubpageLayout from "../layouts/SubpageLayout.astro";
+
+import { projects } from "../data/projects";
+---
+
+<SubpageLayout title="stevending1st's page">
+  <main>
+    <h1>Projects</h1>
+
+    <p class="description">Projects that I created or maintaining.</p>
+
+    <ul class="projects-list">
+      {
+        projects.map(({ name, description, link }) => (
+          <li class="projects-item">
+            { link ? 
+              <a class="projects-item-box" href={link} target="_blank">
+                <h5 class="projects-item-name">{name}</h5>
+                <p class="projects-item-description">{description}</p>
+              </a>: 
+              <div class="projects-item-box">
+                <h5 class="projects-item-name">{name}</h5>
+                <p class="projects-item-description">{description}</p>
+              </div>
+            }
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</SubpageLayout>
+
+<style>
+  main {
+    margin: auto;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    margin: 4rem 0 0 0;
+    font-family: "LXGW Bright Medium";
+    font-weight: "800";
+  }
+
+  .description {
+    margin-top: 0;
+    font-family: "LXGW Bright Medium";
+    font-weight: "600";
+    color: gray;
+  }
+
+  .projects-list {
+    list-style-type: none;
+    margin-bottom: 50px;
+    padding: 0;
+    min-width: 200px;
+    max-width: 1000px;
+  }
+
+  .projects-item:hover {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+  }
+
+  .projects-item {
+    border-width: 1px;
+    border-style: none none dashed;
+    color: gray;
+  }
+
+  .projects-item:last-child {
+    border-style: none;
+  }
+
+  .projects-item:hover > .projects-item-box {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+  }
+
+  .projects-item > .projects-item-box {
+    display: block;
+    width: calc(100% - 30px);
+    height: 100%;
+    color: gray;
+    text-decoration: none;
+    padding: 15px;
+  }
+
+  .projects-item-name {
+    font-family: "LXGW Bright Medium";
+    font-weight: "800";
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+    line-height: 1.5rem;
+  }
+
+  .projects-item-description {
+    font-family: "LXGW WenKai Light";
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.1rem;
+  }
+</style>

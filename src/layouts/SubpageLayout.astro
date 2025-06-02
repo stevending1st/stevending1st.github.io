@@ -1,0 +1,113 @@
+---
+import MdiFileDocumentMultipleOutline from "../icon/MdiFileDocumentMultipleOutline.astro";
+import MdiFaceManShimmerOutline from "../icon/MdiFaceManShimmerOutline.astro";
+import MdiCookieOutline from "../icon/MdiCookieOutline.astro";
+import MdiClipboardAccountOutline from "../icon/MdiClipboardAccountOutline.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="stevending1st's Page" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://unpkg.com/@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Bold/results.css"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo-link" href="/">
+        <div class="logo">stevending1st</div>
+      </a>
+      <ul class="menu">
+        <li>
+          <a title="blog">
+            <MdiFileDocumentMultipleOutline width="1.3em" height="1.3em" />
+          </a>
+        </li>
+        <li>
+          <a title="projects">
+            <MdiCookieOutline width="1.3em" height="1.3em" />
+          </a>
+        </li>
+        <li>
+          <a title="Resume">
+            <MdiClipboardAccountOutline width="1.3em" height="1.3em" />
+          </a>
+        </li>
+        <li>
+          <a title="About">
+            <MdiFaceManShimmerOutline width="1.3em" height="1.3em" />
+          </a>
+        </li>
+      </ul>
+    </header>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+    height: 100vh;
+  }
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+  header {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between
+  }
+  .logo-link {
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .logo {
+    color: white;
+    font-family: "LXGW Bright Medium";
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+  .menu {
+    list-style: none;
+    color: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu > li > a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    margin-right: 8px;
+    align-items: center;
+    justify-items: center;
+  }
+</style>
