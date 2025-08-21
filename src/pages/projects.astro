@@ -5,10 +5,13 @@ import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Light/result.css";
 import SubpageLayout from "../layouts/SubpageLayout.astro";
 
 import { projects } from "../data/projects";
+import SubpageTopMenu from "../components/SubpageTopMenu.astro";
 ---
 
-<SubpageLayout title="stevending1st's page">
+<SubpageLayout title="stevending1st's Projects">
   <main>
+    <SubpageTopMenu />
+
     <h1>Projects</h1>
 
     <p class="description">Projects that I created or maintaining.</p>
@@ -49,7 +52,7 @@ import { projects } from "../data/projects";
   }
 
   h1 {
-    margin: 4rem 0 0 0;
+    margin: 2rem 0 0 0;
     font-family: "LXGW Bright Medium";
     font-weight: "800";
   }
