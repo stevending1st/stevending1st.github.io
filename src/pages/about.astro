@@ -1,0 +1,57 @@
+---
+import "@chinese-fonts/lxgwwenkaibright/dist/LXGWBright-MediumItalic/result.css";
+import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Light/result.css";
+
+import SubpageLayout from "../layouts/SubpageLayout.astro";
+import SubpageTopMenu from "../components/SubpageTopMenu.astro";
+---
+
+<SubpageLayout title="stevending1st's About me">
+  <main>
+    <SubpageTopMenu />
+
+    <h1>About</h1>
+
+    <div class="description">
+      <p>Hi, I am <a href="/">stevending1st</a>, an open-source and programming enthusiast. I care not only about code, but also about the building and operation of communities.</p>
+
+      <p>I am a member of communities such as <a href="https://github.com/freeCodeCamp-China">freeCodeCamp-China</a>, <a href="https://kaiyuanshe.cn/">KAIYUANSHE</a>, and <a href="https://github.com/Open-Source-Bazaar/">Open Source Bazaar</a>.</p>
+
+      <p></p>
+    </p>
+  </main>
+</SubpageLayout>
+
+<style>
+  main {
+    margin: auto;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    margin: 2rem 0 0 0;
+    font-family: "LXGW Bright Medium";
+    font-weight: "800";
+  }
+
+  .description {
+    width: 100%;
+    max-width: calc(100% - 2rem);
+    margin-top: 0;
+    font-family: "LXGW Bright Medium";
+    font-weight: "600";
+    color: gray;
+  }
+
+  a {
+    color: gray;
+  }
+</style>
